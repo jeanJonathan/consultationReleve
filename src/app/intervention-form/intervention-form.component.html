@@ -1,0 +1,57 @@
+<form (ngSubmit)="onSubmit()" #interventionForm="ngForm">
+  <div class="form-group">
+    <label for="technicien">Technicien:</label>
+    <select class="form-control" id="technicien" name="technicien" [(ngModel)]="intervention.technicien" required>
+      <option *ngFor="let technicien of techniciens" [value]="technicien.id">{{technicien.nom}} {{technicien.prenom}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="client">Client:</label>
+    <input type="text" class="form-control" id="client" name="client" [(ngModel)]="intervention.client" required>
+  </div>
+
+  <div class="form-group">
+    <label for="adresse">Adresse:</label>
+    <input type="text" class="form-control" id="adresse" name="adresse" [(ngModel)]="intervention.adresse" required>
+  </div>
+
+  <div class="form-group">
+    <label for="marque">Marque de la chaudière:</label>
+    <select class="form-control" id="marque" name="marque" [(ngModel)]="intervention.marque" required>
+      <option *ngFor="let marque of marques" [value]="marque">{{marque}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="modele">Modèle de la chaudière:</label>
+    <input type="text" class="form-control" id="modele" name="modele" [(ngModel)]="intervention.modele" required>
+  </div>
+
+  <div class="form-group">
+    <label for="dateMiseEnService">Date de mise en service:</label>
+    <input type="date" class="form-control" id="dateMiseEnService" name="dateMiseEnService" [(ngModel)]="intervention.dateMiseEnService" required>
+  </div>
+
+  <div class="form-group">
+    <label for="dateIntervention">Date de l'intervention:</label>
+    <input type="date" class="form-control" id="dateIntervention" name="dateIntervention" [(ngModel)]="intervention.dateIntervention" required>
+  </div>
+
+  <div class="form-group">
+    <label for="numSerie">Numéro de série:</label>
+    <input type="text" class="form-control" id="numSerie" name="numSerie" [(ngModel)]="intervention.numSerie" required>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description de l'intervention:</label>
+    <textarea class="form-control" id="description" name="description" [(ngModel)]="intervention.description" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="tempsPasse">Temps passé (en minutes):</label>
+    <input type="number" class="form-control" id="tempsPasse" name="tempsPasse" [(ngModel)]="intervention.tempsPasse" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="interventionForm.invalid">Enregistrer</button>
+</form>

@@ -1,0 +1,31 @@
+<p>intervention-list works!</p>
+<h2>Liste des interventions</h2>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Technicien</th>
+    <th>Client</th>
+    <th>Adresse</th>
+    <th>Chaudière</th>
+    <th>Date de mise en service</th>
+    <th>Date d'intervention</th>
+    <th>Numéro de série</th>
+    <th>Description</th>
+    <th>Temps passé</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let intervention of interventions">
+    <td>{{ intervention.technicien }}</td>
+    <td>{{ intervention.client }}</td>
+    <td>{{ intervention.adresse }}</td>
+    <td>{{ intervention.chaudiere }}</td>
+    <td>{{ intervention.dateMiseEnService | date }}</td>
+    <td>{{ intervention.dateIntervention | date }}</td>
+    <td>{{ intervention.numeroSerie }}</td>
+    <td>{{ intervention.description }}</td>
+    <td>{{ intervention.tempsPasse }}</td>
+  </tr>
+  </tbody>
+</table>
