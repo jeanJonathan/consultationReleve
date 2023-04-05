@@ -1,32 +1,36 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-//Pour pouvoir acceeder au donnees du serveur json
 import { HttpClientModule } from '@angular/common/http';
-import { MatTableModule } from '@angular/material/table';
+import { FormsModule } from '@angular/forms';
+import { CommonModule, DatePipe } from '@angular/common';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppComponent } from './app.component';
 import { InterventionListComponent } from './intervention-list/intervention-list.component';
-import { InterventionFormComponent } from './intervention-form/intervention-form.component';
-
-//Importation du module Mat table pour gerer afficher la liste des releves d'intervention
+import { InterventionService } from './services/intervention.service';
+import { TechnicienService } from './services/technicien.service';
+import {InterventionFormComponent} from "./intervention-form/intervention-form.component";
+import { InterventionDetailsComponent } from './intervention-details/intervention-details.component';
+import {RouterOutlet} from "@angular/router";
 
 @NgModule({
   declarations: [
     AppComponent,
     InterventionListComponent,
-    InterventionFormComponent
+    InterventionFormComponent,
+    InterventionDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatTableModule
+    HttpClientModule,
+    FormsModule,
+    CommonModule,
+    RouterOutlet
   ],
-  providers: [],
+  providers: [
+    InterventionService,
+    TechnicienService,
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
