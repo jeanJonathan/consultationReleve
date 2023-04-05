@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InterventionListComponent } from './intervention-list/intervention-list.component';
 import { InterventionFormComponent } from './intervention-form/intervention-form.component';
 
+//Importation du module Mat table pour gerer afficher la liste des releves d'intervention
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { InterventionFormComponent } from './intervention-form/intervention-form
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
