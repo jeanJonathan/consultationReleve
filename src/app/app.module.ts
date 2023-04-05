@@ -10,11 +10,13 @@ import { MatTableModule } from '@angular/material/table';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InterventionListComponent } from './intervention-list/intervention-list.component';
+import { InterventionFormComponent } from './intervention-form/intervention-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InterventionListComponent
+    InterventionListComponent,
+    InterventionFormComponent
   ],
   imports: [
     BrowserModule,
