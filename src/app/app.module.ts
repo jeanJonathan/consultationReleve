@@ -9,10 +9,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InterventionListComponent } from './intervention-list/intervention-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InterventionListComponent
   ],
   imports: [
     BrowserModule,
