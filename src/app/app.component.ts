@@ -7,7 +7,7 @@ import {MatTableDataSource} from "@angular/material/table";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'consultationReleve';
+  title = 'Bienvenue dans votre application de consultation de releve';
 
 }
 

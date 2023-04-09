@@ -1,4 +1,3 @@
-<p>intervention-list works!</p>
 <h2>Liste des interventions</h2>
 
 <table class="table">
@@ -16,16 +15,18 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let intervention of interventions">
-    <td>{{ intervention.technicien }}</td>
-    <td>{{ intervention.client }}</td>
-    <td>{{ intervention.adresse }}</td>
-    <td>{{ intervention.chaudiere }}</td>
-    <td>{{ intervention.dateMiseEnService | date }}</td>
-    <td>{{ intervention.dateIntervention | date }}</td>
-    <td>{{ intervention.numeroSerie }}</td>
-    <td>{{ intervention.description }}</td>
-    <td>{{ intervention.tempsPasse }}</td>
-  </tr>
+  <ng-container *ngFor="let intervention of listInterventions$ | async">
+    <tr>
+      <td>{{ intervention.technicien }}</td>
+      <td>{{ intervention.client }}</td>
+      <td>{{ intervention.adresse }}</td>
+      <td>{{ intervention.chaudiere }}</td>
+      <td>{{ intervention.dateMiseEnService | date }}</td>
+      <td>{{ intervention.dateIntervention | date }}</td>
+      <td>{{ intervention.numeroSerie }}</td>
+      <td>{{ intervention.description }}</td>
+      <td>{{ intervention.tempsPasse }}</td>
+    </tr>
+  </ng-container>
   </tbody>
 </table>

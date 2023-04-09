@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { InterventionService } from '../services/intervention.service';
 import {Intervention} from "../Intervention";
+import {Observable} from "rxjs";
+import {TechnicienService} from "../services/technicien.service";
+import {Technicien} from "../Technicien";
 
 
 @Component({
@@ -9,17 +12,11 @@ import {Intervention} from "../Intervention";
   styleUrls: ['./intervention-list.component.css']
 })
 export class InterventionListComponent implements OnInit {
-  interventions!: Intervention[];
-  id!: number;
+
   constructor(private interventionService: InterventionService) { }
-
+  listInterventions$!: Observable<Intervention[]>;
+  //technicienService$!: Observable<Technicien[]>;
   ngOnInit(): void {
-    this.id = 1; // exemple de valeur
-    this.getInterventions();
-  }
-
-  getInterventions(): void {
-    this.interventionService.getInterventions(this.id)
-      .subscribe(interventions => this.interventions = interventions);
+    this.listInterventions$ = this.interventionService.getInterventions();
   }
 }
