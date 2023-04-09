@@ -13,22 +13,22 @@ import {RouterOutlet} from "@angular/router";
 import {InputTimeDirective} from "./input-time.directive";
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    HomeComponent,
     InterventionListComponent,
     InterventionFormComponent,
-    InputTimeDirective,
-    HeaderComponent,
-    HomeComponent
+    InputTimeDirective
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CommonModule,
-    RouterOutlet,
     ReactiveFormsModule
   ],
   providers: [

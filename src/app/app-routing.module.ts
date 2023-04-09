@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import {ActivatedRoute, RouterModule, Routes} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import {InterventionListComponent} from "./intervention-list/intervention-list.component";
 import {InterventionFormComponent} from "./intervention-form/intervention-form.component";
+import {CommonModule} from "@angular/common";
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -13,8 +14,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  providers: [ActivatedRoute]
+  imports: [CommonModule,
+    RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
