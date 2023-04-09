@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { InterventionService } from '../services/intervention.service';
 import {Intervention} from "../Intervention";
 import {Observable} from "rxjs";
-import {TechnicienService} from "../services/technicien.service";
-import {Technicien} from "../Technicien";
 
 
 @Component({
