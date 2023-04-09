@@ -1,5 +1,5 @@
 Projet Angular
-Ce projet est une application web développée avec Angular. Il s'agit d'une application de gestion d'interventions. Les utilisateurs peuvent visualiser une liste d'interventions, ajouter une nouvelle intervention, et voir les détails d'une intervention existante.
+Ce projet est une application web développée avec Angular pour gérer les interventions de maintenance de chaudière. Les utilisateurs peuvent visualiser une liste d'interventions, ajouter une nouvelle intervention, et consulter les rapports d'interventions saisis par les salariés de l'entreprise.
 
 Installation
 Pour installer et exécuter l'application localement, vous devez disposer des outils suivants :
